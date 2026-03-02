@@ -30,4 +30,7 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	int MemberInt = 1;
 
+	UPROPERTY(EditAnywhere)
+	FVector MyVector;
+
 };

@@ -16,7 +16,9 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	UE_LOG(LogTemp, Display, TEXT("MemberFloat: %f. MemberInt: %d"), MemberFloat, MemberInt);
+	FVector TestVector = FVector(11.2f, 3.4f, 7.6f);
+
+	TestVector.Z = 2.5f;
 }
 
 // Called every frame
