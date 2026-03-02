@@ -16,8 +16,7 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	float MyCalculation = 8.0f + (2.5f - 3.0f) * 10.0f;
-	UE_LOG(LogTemp, Display, TEXT("MyCalculation is %f."), MyCalculation);
+	UE_LOG(LogTemp, Display, TEXT("MemberFloat: %f. MemberInt: %d"), MemberFloat, MemberInt);
 }
 
 // Called every frame
