@@ -16,19 +16,15 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	UE_LOG(LogTemp, Display, TEXT("Initiate platform."));
+	int NumberOfApples = 10;
+	int NumberOfOranges = 7;
+	float NumberOfPie = 3.14f;
 
-	int MyInt = 100;
-	MyInt = 50;
+	UE_LOG(LogTemp, Display, TEXT("NumberOfApples: %d %d %f"), NumberOfApples, NumberOfOranges, NumberOfPie);
 
-	bool MyBool = false;
-	MyBool = true;
+	FString MyName = "Gabriel Diniz";
 
-	float MyFloat = 12.34f;
-
-	char MyChar = 'a';
-
-	FString MyString = "Hello world!";
+	UE_LOG(LogTemp, Display, TEXT("My name is %s"), *MyName);
 }
 
 // Called every frame
