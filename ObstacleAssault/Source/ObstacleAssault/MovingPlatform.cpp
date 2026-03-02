@@ -17,6 +17,18 @@ void AMovingPlatform::BeginPlay()
 	Super::BeginPlay();
 	
 	UE_LOG(LogTemp, Display, TEXT("Initiate platform."));
+
+	int MyInt = 100;
+	MyInt = 50;
+
+	bool MyBool = false;
+	MyBool = true;
+
+	float MyFloat = 12.34f;
+
+	char MyChar = 'a';
+
+	FString MyString = "Hello world!";
 }
 
 // Called every frame
