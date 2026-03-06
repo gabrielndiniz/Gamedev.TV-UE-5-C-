@@ -16,9 +16,7 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	FVector TestVector = FVector(11.2f, 3.4f, 7.6f);
-
-	TestVector.Z = 2.5f;
+	SetActorLocation(MyVector);
 }
 
 // Called every frame
