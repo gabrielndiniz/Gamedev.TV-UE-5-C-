@@ -11,17 +11,22 @@ AMovingPlatform::AMovingPlatform()
 
 }
 
-void MyTestFunction()
+void MyTestFunction(float MyFloatParam, FString MyStringParam)
 {
-	UE_LOG(LogTemp, Log, TEXT("Test."));
+	UE_LOG(LogTemp, Log, TEXT("Test float is %f."), MyFloatParam);
+
+
+	UE_LOG(LogTemp, Log, TEXT("Test string is %s."), *MyStringParam);
 }
 
 // Called when the game starts or when spawned
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
+
+	FString MyName = GetName();
 	
-	MyTestFunction();
+	MyTestFunction(3.f, MyName);
 }
 
 // Called every frame
