@@ -32,4 +32,6 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	FRotator PlatformRotation;
+
+	FVector StartLocation;
 };
