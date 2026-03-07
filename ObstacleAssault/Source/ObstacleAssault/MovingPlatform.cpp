@@ -11,12 +11,17 @@ AMovingPlatform::AMovingPlatform()
 
 }
 
+void MyTestFunction()
+{
+	UE_LOG(LogTemp, Log, TEXT("Test."));
+}
+
 // Called when the game starts or when spawned
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	
+	MyTestFunction();
 }
 
 // Called every frame
