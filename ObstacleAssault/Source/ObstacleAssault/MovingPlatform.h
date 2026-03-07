@@ -34,4 +34,8 @@ public:
 	FRotator PlatformRotation;
 
 	FVector StartLocation;
+
+	UPROPERTY(VisibleAnywhere)
+	float DistanceMoved = 0.f;
+
 };
