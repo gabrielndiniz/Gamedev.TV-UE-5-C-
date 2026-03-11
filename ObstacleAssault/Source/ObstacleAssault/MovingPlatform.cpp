@@ -39,6 +39,12 @@ void AMovingPlatform::MovePlatform(float DeltaTime)
 
 	DistanceMoved = FVector::Dist(StartLocation, CurrentLocation);
 
+	if (DistanceMoved >= MoveDistance)
+	{
+		PlatformVelocity = -PlatformVelocity;
+		StartLocation = CurrentLocation;
+	}
+
 }
 
 //Rotate the Platform according with rotator.
