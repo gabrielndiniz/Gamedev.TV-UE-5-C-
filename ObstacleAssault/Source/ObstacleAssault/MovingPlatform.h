@@ -33,7 +33,7 @@ public:
 	FVector PlatformVelocity = FVector(0.f,0.f,0.f);
 
 	UPROPERTY(EditAnywhere)
-	FRotator PlatformRotation;
+	FRotator RotationVelocity;
 
 	FVector StartLocation;
 
