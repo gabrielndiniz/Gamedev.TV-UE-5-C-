@@ -31,13 +31,7 @@ void AMovingPlatform::Tick(float DeltaTime)
 
 void AMovingPlatform::MovePlatform(float DeltaTime)
 {
-	FVector CurrentLocation = GetActorLocation();
-
-	CurrentLocation = CurrentLocation + (PlatformVelocity * DeltaTime);
-
-	SetActorLocation(CurrentLocation);
-
-	DistanceMoved = FVector::Dist(StartLocation, CurrentLocation);
+	DistanceMoved = GetDistanceMoved();
 
 	if (DistanceMoved >= MoveDistance)
 	{
@@ -54,7 +48,14 @@ void AMovingPlatform::MovePlatform(float DeltaTime)
 
 		PlatformVelocity = -PlatformVelocity;
 	}
+	else
+	{
+		FVector CurrentLocation = GetActorLocation();
 
+		CurrentLocation = CurrentLocation + (PlatformVelocity * DeltaTime);
+
+		SetActorLocation(CurrentLocation);
+	}
 }
 
 //Rotate the Platform according with rotator.
@@ -66,4 +67,11 @@ void AMovingPlatform::RotatePlatform(float DeltaTime)
 	
 	SetActorRotation(CurrentRotation);
 }
+
+float AMovingPlatform::GetDistanceMoved()
+{
+	return FVector::Dist(StartLocation, GetActorLocation());
+}
+
+
 
